@@ -1,13 +1,15 @@
-Welcome! 
+# Welcome! 
 
-Let's leave this lobster unamed no longer! 
-With this repo will help you be part of this momentus milestone. 
+*Let's leave this lobster unamed no longer!*
+![Charles and his lobster](lobster.jpg "Charles and his lobster")
+
+This repo will help you be part of this momentus milestone. 
 The script will
 
 * Generate a new wallet
 * Tell you where to send 2 ada
-* Submit a transaction to the lobster challenge
-* And get us one step closer to have the challenge completed
+* Automatically Submit a transaction to the lobster challenge
+* Get us one step closer to giving this lobster a name!
 
 ### How to use
 
@@ -44,3 +46,5 @@ https://cardano.stackexchange.com/questions/895/using-cardano-node-installed-by-
 
 
 
+lobster-challenge repo
+https://github.com/input-output-hk/lobster-challenge
