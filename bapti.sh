@@ -22,7 +22,7 @@ wallet=$1
 echo ">>> Create new wallet if needed"
 mkdir $wallet
 if [ $? -eq 0 ]; then
-	cardano-cli address key-gen --verification-key-file payment.vkey --signing-key-file $wallet/payment.skey
+	cardano-cli address key-gen --verification-key-file $wallet/payment.vkey --signing-key-file $wallet/payment.skey
 	cardano-cli address build --payment-verification-key-file payment.vkey --mainnet --out-file $wallet/payment.addr
 fi
 
@@ -30,12 +30,12 @@ addr=$(cat $wallet/payment.addr)
 
 # Fund the wallet
 # Uncomment and modify for auto funding via cardano-wallet
-echo ">>> Fund $wallet"
-echo "$WALLET_PASSWORD" | ../../cardano-wallet/result/bin/cardano-wallet transaction create e81db6c24a41d403d9159ff612bcceaf3a60610d --payment 2000000@$addr > /dev/null
+#echo ">>> Fund $wallet"
+#echo "$WALLET_PASSWORD" | ../cardano-wallet/result/bin/cardano-wallet transaction create e81db6c24a41d403d9159ff612bcceaf3a60610d --payment 2000000@$addr > /dev/null
 
 # check that funds have arrived then make a lobster contribute
 echo ">>> Waiting for funds to arrive"
-from=$(./mainnet-utxo-at.sh $wallet/payment.addr | grep 2000000 | awk '{print $1}')
+from=$(./mainnet-utxo-at.sh $wallet/payment.addr | grep 2000000 | head -1 | awk '{print $1}')
 while [ -z "$from" ]
 do
       echo ">>> Pending... send funds to"
@@ -68,8 +68,6 @@ echo "votes: $votes"
 
 if [ $? -eq 0 ]; then
 	mv lobster-tx* $wallet
-	git add --all
-	git commit -m "$wallet done"
 else
     echo "Lobster transaction failed"
 fi

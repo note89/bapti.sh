@@ -9,9 +9,6 @@
 #   new counter
 #   old votes
 
-export CARDANO_NODE_SOCKET_PATH=/home/nils/Programmering/cardano/cardano-node/state-node-mainnet/node.socket
-
-
 bodyFile=lobster-tx-body.03
 outFile=lobster-tx.03
 nftPolicyFile="nft-mint-policy.plutus"
