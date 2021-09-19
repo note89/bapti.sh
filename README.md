@@ -11,7 +11,7 @@ The script will
 * Automatically Submit a transaction to the lobster challenge
 * Get us one step closer to giving this lobster a name!
 
-### Prerequisites 
+### Prerequisites
 1. Daedalus or a Cardano-node synced and running
 2. cardano-cli
 Download the executables for the `cardano-cli` here
