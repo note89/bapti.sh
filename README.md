@@ -1,6 +1,7 @@
 # Welcome! 
 
-*Let's leave this lobster unamed no longer!*
+**Let's leave this lobster unamed no longer!**
+
 ![Charles and his lobster](lobster.jpg "Charles and his lobster")
 
 This repo will help you be part of this momentus milestone. 
