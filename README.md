@@ -6,8 +6,8 @@ The script will
 
 * Generate a new wallet
 * Tell you where to send 2 ada
-* Submit a transaction to the lobster challange
-* And get us one step closer to have the challange completed
+* Submit a transaction to the lobster challenge
+* And get us one step closer to have the challenge completed
 
 ### How to use
 

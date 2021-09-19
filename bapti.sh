@@ -4,7 +4,7 @@
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 echo "<<<<<<<<<<<<<<<<<<      Welcome      >>>>>>>>>>>>>>>>>>>>"
 echo "<<<<<<<<<<<<<<<<<<       to the      >>>>>>>>>>>>>>>>>>>>"
-echo "<<<<<<<<<<<<<<<<<< LOBSTER CHALLANGE >>>>>>>>>>>>>>>>>>>>"
+echo "<<<<<<<<<<<<<<<<<< LOBSTER CHALLENGE >>>>>>>>>>>>>>>>>>>>"
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 echo "ICAgICAgX19fXwogICAgIC8gIF9fXAogICAgfDogLy0tLSkgIFwgICAgLyAgIF9fXwogICAgIFw6
 KCBfLyAgICBcICAvICAgL18gIFwKICAgICAgXCAgXCAgICAgIFwvICAgIFxfXDo6KQogICAgICAg
@@ -38,7 +38,7 @@ echo ">>> Waiting for funds to arrive"
 from=$(./mainnet-utxo-at.sh $wallet/payment.addr | grep 2000000 | head -1 | awk '{print $1}')
 while [ -z "$from" ]
 do
-      echo ">>> Pending... send funds to"
+      echo ">>> Pending... send 2 ada to"
       echo "$addr"
       sleep 3
       from=$(./mainnet-utxo-at.sh $wallet/payment.addr | grep 2000000 | awk '{print $1}')
