@@ -23,7 +23,7 @@ echo ">>> Create new wallet if needed"
 mkdir $wallet
 if [ $? -eq 0 ]; then
 	cardano-cli address key-gen --verification-key-file $wallet/payment.vkey --signing-key-file $wallet/payment.skey
-	cardano-cli address build --payment-verification-key-file payment.vkey --mainnet --out-file $wallet/payment.addr
+	cardano-cli address build --payment-verification-key-file $wallet/payment.vkey --mainnet --out-file $wallet/payment.addr
 fi
 
 addr=$(cat $wallet/payment.addr)
